@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b63ce">
+  <title>Aurora FC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img class="crest-img" src="assets/aurora.jpg" alt="Escudo do Aurora FC">
+      <div>
+        <div class="brand-name">AURORA <span>FC</span></div>
+        <small>Força • União • Paixão</small>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <button class="nav-btn active" data-section="clube">Clube</button>
+      <button class="nav-btn" data-section="elenco">Elenco</button>
+      <button class="nav-btn" data-section="socio">Sócio-Torcedor</button>
+      <button class="nav-btn" data-section="store">Store</button>
+      <button class="nav-btn" data-section="jogos">Jogos</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CLUBE -->
+    <section id="clube" class="section active">
+      <div class="hero">
+        <div>
+          <span class="eyebrow">BEM-VINDO AO</span>
+          <h1>AURORA FC</h1>
+          <p>Um novo capítulo começa. Aqui, cada jogo é uma oportunidade para fazer história.</p>
+          <a class="primary-btn" href="#jogos" data-go="jogos">Ver próximos jogos</a>
+        </div>
+        <img class="hero-crest-img" src="assets/aurora.jpg" alt="Escudo do Aurora FC">
+      </div>
+
+      <div class="section-title"><span></span><h2>Sobre o clube</h2></div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Fundação</h3>
+          <strong class="big">14/09/2026</strong>
+          <p>O início da história do Aurora FC.</p>
+        </article>
+        <article class="card">
+          <h3>Identidade</h3>
+          <p>Um clube criado para representar sua torcida, revelar talentos e competir com raça em cada partida.</p>
+        </article>
+        <article class="card">
+          <h3>Estádio</h3>
+          <p><strong>Estádio Aurora</strong> — nossa casa, nossa torcida, nossa paixão.</p>
+        </article>
+        <article class="card">
+          <h3>Cores</h3>
+          <p>Azul e branco, símbolos de uma identidade que começa a ser construída.</p>
+        </article>
+      </div>
+
+      <div class="section-title"><span></span><h2>Próximo jogo</h2></div>
+      <article class="match featured">
+        <div class="match-side">
+          <img class="mini-crest-img" src="assets/aurora.jpg" alt="Aurora FC"><strong>AURORA</strong>
+        </div>
+        <div class="match-info">
+          <span class="tag">QUARTAS DE FINAIS • IDA</span>
+          <b>SEGUNDA • 14/09/2026 • 20:00</b>
+          <span>Copa Elite Football</span>
+          <small>MANDANTE</small>
+        </div>
+        <div class="match-side">
+          <img class="mini-crest-img opponent-img" src="assets/guarulhos.jpg" alt="Guarulhos FC"><strong>GUARULHOS FC</strong>
+        </div>
+      </article>
+    </section>
+
+    <!-- ELENCO -->
+    <section id="elenco" class="section">
+      <div class="section-title"><span></span><h2>Elenco</h2></div>
+      <p class="lead">Conheça os jogadores que formam o primeiro elenco do Aurora FC.</p>
+      <div class="squad" id="squad"></div>
+    </section>
+
+    <!-- SOCIO -->
+    <section id="socio" class="section">
+      <div class="section-title"><span></span><h2>Sócio-Torcedor</h2></div>
+      <article class="membership">
+        <span class="tag">PLANO OFICIAL</span>
+        <h3>Plano Aurora Torcedor</h3>
+        <div class="price">R$ 35<span>/mês</span></div>
+        <p>Um plano pensado para quem quer estar junto do Aurora em todos os momentos.</p>
+        <ul>
+          <li>Carteirinha digital do clube</li>
+          <li>Descontos na Aurora Store</li>
+          <li>Prioridade em ações e eventos do clube</li>
+          <li>Participação em sorteios de produtos</li>
+        </ul>
+        <button class="primary-btn" onclick="interest('Sócio-Torcedor')">QUERO SER SÓCIO</button>
+      </article>
+    </section>
+
+    <!-- STORE -->
+    <section id="store" class="section">
+      <div class="section-title"><span></span><h2>Aurora Store</h2></div>
+      <p class="lead">Vista as cores do Aurora.</p>
+      <div class="store-grid">
+        <article class="product">
+          <div class="shirt blue">CAMISA 1</div>
+          <h3>Camisa 1 Aurora FC</h3>
+          <p>Azul e branco • Modelo oficial</p>
+          <button class="primary-btn" onclick="interest('Camisa 1')">TENHO INTERESSE</button>
+        </article>
+        <article class="product">
+          <div class="shirt white">CAMISA 2</div>
+          <h3>Camisa 2 Aurora FC</h3>
+          <p>Branca e azul • Modelo oficial</p>
+          <button class="primary-btn" onclick="interest('Camisa 2')">TENHO INTERESSE</button>
+        </article>
+        <article class="product">
+          <div class="shirt fan">TORCEDOR</div>
+          <h3>Camisa Torcedor Aurora</h3>
+          <p>Azul e branca • Modelo torcedor</p>
+          <button class="primary-btn" onclick="interest('Camisa Torcedor')">TENHO INTERESSE</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOGOS -->
+    <section id="jogos" class="section">
+      <div class="section-title"><span></span><h2>Jogos</h2></div>
+
+      <div class="game-list">
+        <article class="game-card">
+          <div class="round">QUARTAS DE FINAIS • IDA</div>
+          <div class="teams">
+            <div><img class="mini-crest-img" src="assets/aurora.jpg" alt="Aurora FC"><strong>Aurora</strong></div>
+            <b class="vs">X</b>
+            <div><img class="mini-crest-img opponent-img" src="assets/guarulhos.jpg" alt="Guarulhos FC"><strong>Guarulhos FC</strong></div>
+          </div>
+          <p>Copa Elite Football • <strong>Mandante: Aurora</strong></p>
+          <small>SEGUNDA • 14/09/2026 • 20:00</small>
+        </article>
+
+        <article class="game-card">
+          <div class="round">QUARTAS DE FINAIS • VOLTA</div>
+          <div class="teams">
+            <div><img class="mini-crest-img opponent-img" src="assets/guarulhos.jpg" alt="Guarulhos FC"><strong>Guarulhos FC</strong></div>
+            <b class="vs">X</b>
+            <div><img class="mini-crest-img" src="assets/aurora.jpg" alt="Aurora FC"><strong>Aurora</strong></div>
+          </div>
+          <p>Copa Elite Football • <strong>Mandante: Guarulhos FC</strong></p>
+          <small>TERÇA • 15/09/2026 • 21:00</small>
+        </article>
+      </div>
+
+      <div class="section-title"><span></span><h2>Ingressos</h2></div>
+      <article class="ticket-card">
+        <div class="ticket-head">
+          <div>
+            <span class="tag">COPA ELITE FOOTBALL</span>
+            <h3>Aurora x Guarulhos FC</h3>
+            <p>Quartas de finais • Jogo de ida</p>
+          </div>
+          <div class="ticket-symbol">🎟</div>
+        </div>
+        <div class="ticket-grid">
+          <div class="ticket"><span>Setor Oeste</span><strong>R$ 10</strong><button onclick="buyTicket('Setor Oeste')">COMPRAR</button></div>
+          <div class="ticket"><span>Setor Norte</span><strong>R$ 10</strong><button onclick="buyTicket('Setor Norte')">COMPRAR</button></div>
+          <div class="ticket"><span>Alambrado Atrás do Gol</span><strong>R$ 2</strong><button onclick="buyTicket('Alambrado Atrás do Gol')">COMPRAR</button></div>
+        </div>
+        <p class="notice">🎟️ Jogo: segunda-feira, 14/09/2026, às 20:00. A abertura das vendas será anunciada pelo clube.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <strong>AURORA FC</strong> • Fundado em 14/09/2026<br>
+    Força • União • Respeito
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
